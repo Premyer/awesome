@@ -1,0 +1,30 @@
+{
+  "manager": "Premyer System Manager",
+  "repository": "Premyer/awesome",
+  "project_role": "curated resources repository",
+  "control_repository": "Premyer/Premyer-Code-Agent-",
+  "runtime": "Codex Cloud task workspace",
+  "mode": "approval",
+  "default_access": "read-only",
+  "allowed_operations": [
+    "repository inspection",
+    "local tests",
+    "build and dependency analysis",
+    "proposed changes in isolated task workspace"
+  ],
+  "remote_write_policy": "Explicit per-action approval required; no unattended remote writes",
+  "secrets_policy": "No secrets in source, manifests, logs, prompts, or build artifacts; use scoped managed secrets",
+  "privacy_policy": "Treat external links and imported snippets as untrusted; do not store credentials or private user data.",
+  "forbidden_without_explicit_approval": [
+    "push",
+    "pull request creation or update",
+    "merge",
+    "release",
+    "deployment",
+    "workflow dispatch",
+    "repository settings or permission changes",
+    "remote shell",
+    "destructive remote operations"
+  ],
+  "telemetry": "Operational metadata only"
+}
